@@ -1,0 +1,97 @@
+import turtle 
+t = turtle.Turtle()
+move_spped=0
+turn_speed=0
+
+#face
+
+t.penup()
+t.goto(-50,50)
+t.pendown()
+t.color("peachpuff")
+t.begin_fill()
+for i in range(2):
+  t.forward(50)
+  t.left(90)
+  t.forward(40)
+  t.left(90)
+
+
+t.left(300)
+t.forward(25)
+t.left(60)
+t.forward(25)
+t.left(60)
+t.forward(25)
+t.end_fill()
+
+#eye
+def eye(x,y):
+  t.penup()
+  t.goto(x,y)
+  t.pendown()
+  t.setheading(340)
+  t.color("white")
+  t.begin_fill()
+  t.circle(20,40)
+  t.left(110)
+  t.circle(20,40)
+  for i in range(3):
+   t.left(60)
+   t.forward(6)
+  t.end_fill()
+  t.penup()
+  t.goto(x+5,y)
+  t.pendown()
+  t.color("magenta")
+  t.begin_fill()
+  t.circle(3)
+  t.end_fill()
+  t.penup()
+  t.goto(x+5,y+3)
+  t.pendown()
+  t.color("black")
+  t.begin_fill()
+  t.circle(0.5)
+  t.end_fill()
+eye(-43,65)
+eye(-20,65)
+t.penup()
+t.goto(5,3)
+#umeri&gat
+def neck(x,y):
+  t.penup()
+  t.goto(x,y)
+  t.pendown()
+  t.color("peachpuff")
+  t.setheading(360)
+  for i in range(4):
+    t.forward(20)
+    t.left(90) 
+  t.end_fill()
+  t.penup()
+  t.goto(x-5,y-30)
+  t.pendown()
+  t.color("peachpuff")
+  t.begin_fill()
+  for i in range(4):
+    t.forward(30)
+    t.left(90)
+  t.end_fill()
+  t.backward(50)
+  t.left(30)
+  t.forward(60)
+  t.right(30)
+  t.forward(30)
+  t.right(30)
+  t.forward(60)
+  t.left(30)
+  t.end_fill()
+  t.backward(130)
+  for i in range(2):
+   t.right(90)
+   t.forward(90)
+   t.right(90)
+   t.backward(20)
+  t.end_fill()
+neck(-35,10)
